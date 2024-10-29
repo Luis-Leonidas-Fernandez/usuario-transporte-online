@@ -7,24 +7,24 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:provider/provider.dart';
-import 'package:usuario_inri/pages/alarm_page.dart';
+import 'package:usuario/pages/alarm_page.dart';
 
-import 'package:usuario_inri/pages/notifications_access.dart';
-import 'package:usuario_inri/pages/privacy_page.dart';
-import 'package:usuario_inri/providers/login_form_validar.dart';
-import 'package:usuario_inri/routes/routes.dart';
-import 'package:usuario_inri/service/addresses_service.dart';
-import 'package:usuario_inri/service/auth_service.dart';
-import 'package:usuario_inri/blocs/blocs.dart';
+import 'package:usuario/pages/notifications_access.dart';
+import 'package:usuario/pages/privacy_page.dart';
+import 'package:usuario/providers/login_form_validar.dart';
+import 'package:usuario/routes/routes.dart';
+import 'package:usuario/service/addresses_service.dart';
+import 'package:usuario/service/auth_service.dart';
+import 'package:usuario/blocs/blocs.dart';
 
 import 'package:intl/intl.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:intl/number_symbols_data.dart';
 
 import 'package:intl/number_symbols.dart';
-import 'package:usuario_inri/config/namber_symbol.dart';
+import 'package:usuario/config/namber_symbol.dart';
 import 'package:android_alarm_manager_plus/android_alarm_manager_plus.dart';
-import 'package:usuario_inri/splash/splash_screen.dart';
+import 'package:usuario/splash/splash_screen.dart';
 
 
 

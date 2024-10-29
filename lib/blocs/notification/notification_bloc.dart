@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:equatable/equatable.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:usuario_inri/models/notification.dart';
+import 'package:usuario/models/notification.dart';
 
 part 'notification_event.dart';
 part 'notification_state.dart';

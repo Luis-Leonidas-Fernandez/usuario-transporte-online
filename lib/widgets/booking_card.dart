@@ -1,21 +1,21 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:usuario_inri/blocs/blocs.dart';
-import 'package:usuario_inri/constants/constants.dart';
-import 'package:usuario_inri/models/address.dart';
-import 'package:usuario_inri/responsive/responsive_ui.dart';
-import 'package:usuario_inri/service/addresses_service.dart';
-import 'package:usuario_inri/service/message_service.dart';
-import 'package:usuario_inri/service/storage_service.dart';
+import 'package:usuario/blocs/blocs.dart';
+import 'package:usuario/constants/constants.dart';
+//import 'package:usuario/models/address.dart';
+import 'package:usuario/responsive/responsive_ui.dart';
+import 'package:usuario/service/addresses_service.dart';
+import 'package:usuario/service/message_service.dart';
+import 'package:usuario/service/storage_service.dart';
 
-import 'package:usuario_inri/widgets/btn_reusable.dart';
-import 'package:usuario_inri/widgets/container_detail.dart';
-import 'package:usuario_inri/widgets/custom_message_error.dart';
-import 'package:usuario_inri/widgets/custom_message_success.dart';
+import 'package:usuario/widgets/btn_reusable.dart';
+import 'package:usuario/widgets/container_detail.dart';
+import 'package:usuario/widgets/custom_message_error.dart';
+import 'package:usuario/widgets/custom_message_success.dart';
 
-import 'package:usuario_inri/widgets/presentation_container.dart';
-import 'package:usuario_inri/widgets/widgets.dart';
+import 'package:usuario/widgets/presentation_container.dart';
+import 'package:usuario/widgets/widgets.dart';
 
 class BookingCard extends StatefulWidget {
 

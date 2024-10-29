@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:usuario_inri/models/address.dart';
-import 'package:usuario_inri/models/usuario.dart';
+import 'package:usuario/models/address.dart';
+import 'package:usuario/models/usuario.dart';
 import 'package:intl/intl.dart';
-import 'package:usuario_inri/responsive/responsive_ui.dart';
+import 'package:usuario/responsive/responsive_ui.dart';
 
 
 class CardView extends StatelessWidget {

@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:usuario_inri/models/alarm.dart';
+import 'package:usuario/models/alarm.dart';
 import 'package:equatable/equatable.dart';
 
 

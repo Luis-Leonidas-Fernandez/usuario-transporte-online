@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:usuario_inri/animation/animate_page.dart';
-import 'package:usuario_inri/pages/login_page.dart';
+import 'package:usuario/animation/animate_page.dart';
+import 'package:usuario/pages/login_page.dart';
 
 
 class SplashScreen extends StatefulWidget {

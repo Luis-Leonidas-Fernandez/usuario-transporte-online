@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'dart:isolate';
 
-import 'package:usuario_inri/models/address.dart';
-import 'package:usuario_inri/service/storage_service.dart';
+import 'package:usuario/models/address.dart';
+import 'package:usuario/service/storage_service.dart';
 
 
 

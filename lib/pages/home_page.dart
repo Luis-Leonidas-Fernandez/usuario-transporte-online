@@ -2,20 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:latlong2/latlong.dart';
-import 'package:usuario_inri/blocs/blocs.dart';
-import 'package:usuario_inri/constants/app_bar.dart';
+import 'package:usuario/blocs/blocs.dart';
+import 'package:usuario/constants/app_bar.dart';
 
 
-import 'package:usuario_inri/models/address.dart';
-import 'package:usuario_inri/models/usuario.dart';
+import 'package:usuario/models/address.dart';
+import 'package:usuario/models/usuario.dart';
 //import 'package:usuario_inri/service/message_service.dart';
 
 
-import 'package:usuario_inri/views/circular_progress_view.dart';
-import 'package:usuario_inri/views/map_view_order.dart';
-import 'package:usuario_inri/widgets/booking_card.dart';
-import 'package:usuario_inri/widgets/car.dart';
-import 'package:usuario_inri/widgets/small_booking_card.dart';
+import 'package:usuario/views/circular_progress_view.dart';
+import 'package:usuario/views/map_view_order.dart';
+import 'package:usuario/widgets/booking_card.dart';
+import 'package:usuario/widgets/car.dart';
+import 'package:usuario/widgets/small_booking_card.dart';
 
 
 class HomePage extends StatefulWidget {

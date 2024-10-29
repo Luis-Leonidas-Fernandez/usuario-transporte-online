@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:usuario_inri/blocs/blocs.dart';
-import 'package:usuario_inri/responsive/responsive_ui.dart';
-import 'package:usuario_inri/service/addresses_service.dart';
-import 'package:usuario_inri/service/message_service.dart';
-import 'package:usuario_inri/widgets/button_options.dart';
-import 'package:usuario_inri/widgets/custom_message_error.dart';
-import 'package:usuario_inri/widgets/custom_message_success.dart';
+import 'package:usuario/blocs/blocs.dart';
+import 'package:usuario/responsive/responsive_ui.dart';
+import 'package:usuario/service/addresses_service.dart';
+import 'package:usuario/service/message_service.dart';
+import 'package:usuario/widgets/button_options.dart';
+import 'package:usuario/widgets/custom_message_error.dart';
+import 'package:usuario/widgets/custom_message_success.dart';
 
 class ReservarButton extends StatelessWidget {
 

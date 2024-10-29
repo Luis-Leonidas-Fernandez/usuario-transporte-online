@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:usuario_inri/responsive/responsive_ui.dart';
+import 'package:usuario/responsive/responsive_ui.dart';
 
 class AuthBackground extends StatelessWidget {
   

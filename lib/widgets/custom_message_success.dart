@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:usuario_inri/blocs/blocs.dart';
+import 'package:usuario/blocs/blocs.dart';
 
 class CustomSnackBarContentSuccess extends StatelessWidget {
   const CustomSnackBarContentSuccess({

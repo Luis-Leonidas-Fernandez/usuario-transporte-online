@@ -1,7 +1,7 @@
 import 'package:geolocator/geolocator.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:usuario_inri/service/storage_service.dart';
+import 'package:usuario/service/storage_service.dart';
 
 class LocationService {
 

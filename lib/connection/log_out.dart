@@ -1,7 +1,7 @@
 import 'package:hydrated_bloc/hydrated_bloc.dart';
-import 'package:usuario_inri/service/addresses_service.dart';
-import 'package:usuario_inri/Generators/isolate_parse_json.dart';
-import 'package:usuario_inri/service/storage_service.dart';
+import 'package:usuario/service/addresses_service.dart';
+import 'package:usuario/Generators/isolate_parse_json.dart';
+import 'package:usuario/service/storage_service.dart';
 
 class LogOutApp {
 

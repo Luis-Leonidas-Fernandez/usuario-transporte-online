@@ -1,8 +1,8 @@
 import 'package:equatable/equatable.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
-import 'package:usuario_inri/models/login.dart';
-import 'package:usuario_inri/models/usuario.dart';
-import 'package:usuario_inri/service/auth_service.dart';
+import 'package:usuario/models/login.dart';
+import 'package:usuario/models/usuario.dart';
+import 'package:usuario/service/auth_service.dart';
 
 part 'auth_event.dart';
 part 'auth_state.dart';

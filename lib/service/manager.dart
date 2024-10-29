@@ -1,1 +1,1 @@
-export 'package:usuario_inri/service/taskmanager_service.dart';
+export 'package:usuario/service/taskmanager_service.dart';

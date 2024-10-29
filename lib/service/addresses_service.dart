@@ -3,13 +3,13 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 import 'package:latlong2/latlong.dart';
-import 'package:usuario_inri/Generators/isolate_parse_json.dart';
-import 'package:usuario_inri/global/environment.dart';
-import 'package:usuario_inri/models/address.dart';
-import 'package:usuario_inri/models/location.dart';
-import 'package:usuario_inri/models/usuario.dart';
-import 'package:usuario_inri/service/auth_service.dart';
-import 'package:usuario_inri/service/storage_service.dart';
+import 'package:usuario/Generators/isolate_parse_json.dart';
+import 'package:usuario/global/environment.dart';
+import 'package:usuario/models/address.dart';
+import 'package:usuario/models/location.dart';
+import 'package:usuario/models/usuario.dart';
+import 'package:usuario/service/auth_service.dart';
+import 'package:usuario/service/storage_service.dart';
 
 
 class AddressService {   

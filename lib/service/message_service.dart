@@ -1,5 +1,5 @@
 import 'package:android_alarm_manager_plus/android_alarm_manager_plus.dart';
-import 'package:usuario_inri/service/manager.dart';
+import 'package:usuario/service/manager.dart';
 
 
 class MessageService {

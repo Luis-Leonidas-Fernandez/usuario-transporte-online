@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:usuario_inri/blocs/blocs.dart';
-import 'package:usuario_inri/connection/log_out.dart';
-import 'package:usuario_inri/responsive/responsive_ui.dart';
+import 'package:usuario/blocs/blocs.dart';
+import 'package:usuario/connection/log_out.dart';
+import 'package:usuario/responsive/responsive_ui.dart';
 
 
 class AppConstants {

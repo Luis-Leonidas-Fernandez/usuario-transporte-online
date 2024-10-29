@@ -1,9 +1,9 @@
 import 'dart:async';
 import 'package:equatable/equatable.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
-import 'package:usuario_inri/blocs/blocs.dart';
-import 'package:usuario_inri/models/address.dart';
-import 'package:usuario_inri/service/addresses_service.dart';
+import 'package:usuario/blocs/blocs.dart';
+import 'package:usuario/models/address.dart';
+import 'package:usuario/service/addresses_service.dart';
 
 part 'address_event.dart';
 part 'address_state.dart';

@@ -3,7 +3,7 @@ import 'package:equatable/equatable.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:usuario_inri/models/gps.dart';
+import 'package:usuario/models/gps.dart';
 
 
 part 'gps_event.dart';

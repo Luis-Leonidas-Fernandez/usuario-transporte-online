@@ -5,7 +5,7 @@ import 'package:equatable/equatable.dart';
 
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
-import 'package:usuario_inri/blocs/blocs.dart';
+import 'package:usuario/blocs/blocs.dart';
 
 import 'dart:math' as math;
 

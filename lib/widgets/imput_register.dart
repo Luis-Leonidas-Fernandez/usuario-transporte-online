@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'package:usuario_inri/blocs/user/auth_bloc.dart';
-import 'package:usuario_inri/constants/constants.dart';
-import 'package:usuario_inri/providers/login_form_validar.dart';
-import 'package:usuario_inri/widgets/alert_screen.dart';
-import 'package:usuario_inri/widgets/btn_reusable.dart';
+import 'package:usuario/blocs/user/auth_bloc.dart';
+import 'package:usuario/constants/constants.dart';
+import 'package:usuario/providers/login_form_validar.dart';
+import 'package:usuario/widgets/alert_screen.dart';
+import 'package:usuario/widgets/btn_reusable.dart';
 
 class ImputsRegister extends StatefulWidget {
   const ImputsRegister({super.key});

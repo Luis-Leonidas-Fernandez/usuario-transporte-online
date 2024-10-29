@@ -4,9 +4,9 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:usuario_inri/constants/constants.dart';
-import 'package:usuario_inri/service/addresses_service.dart';
-import 'package:usuario_inri/service/location_service.dart';
+import 'package:usuario/constants/constants.dart';
+import 'package:usuario/service/addresses_service.dart';
+import 'package:usuario/service/location_service.dart';
 
 @pragma('vm:entry-point')
  void getStatusAddress() async {  

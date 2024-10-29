@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'package:usuario_inri/animation/animate_page.dart';
-import 'package:usuario_inri/constants/constants.dart';
-import 'package:usuario_inri/pages/register_page.dart';
-import 'package:usuario_inri/providers/login_form_validar.dart';
-import 'package:usuario_inri/responsive/responsive_ui.dart';
-import 'package:usuario_inri/widgets/imputs.dart';
+import 'package:usuario/animation/animate_page.dart';
+import 'package:usuario/constants/constants.dart';
+import 'package:usuario/pages/register_page.dart';
+import 'package:usuario/providers/login_form_validar.dart';
+import 'package:usuario/responsive/responsive_ui.dart';
+import 'package:usuario/widgets/imputs.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});

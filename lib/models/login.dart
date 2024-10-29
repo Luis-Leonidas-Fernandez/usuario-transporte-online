@@ -3,7 +3,7 @@
 //  final loginResponse = loginResponseFromJson(jsonString);
 
 import 'dart:convert';
-import 'package:usuario_inri/models/usuario.dart';
+import 'package:usuario/models/usuario.dart';
 
 LoginResponse loginResponseFromJson(String str) => LoginResponse.fromJson(json.decode(str));
 

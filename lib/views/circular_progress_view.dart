@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:usuario_inri/constants/constants.dart';
-import 'package:usuario_inri/widgets/circle_progress.dart';
+import 'package:usuario/constants/constants.dart';
+import 'package:usuario/widgets/circle_progress.dart';
 
 
 class CircularProgress extends StatefulWidget {

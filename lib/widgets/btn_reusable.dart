@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:usuario_inri/constants/constants.dart';
+import 'package:usuario/constants/constants.dart';
 
 
 class ButtonReusable extends StatefulWidget {

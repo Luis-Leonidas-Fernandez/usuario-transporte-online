@@ -3,14 +3,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:usuario_inri/blocs/address/address_bloc.dart';
-import 'package:usuario_inri/blocs/blocs.dart';
-import 'package:usuario_inri/blocs/map/map_bloc.dart';
-import 'package:usuario_inri/responsive/responsive_ui.dart';
-import 'package:usuario_inri/service/addresses_service.dart';
-import 'package:usuario_inri/service/message_service.dart';
-import 'package:usuario_inri/service/storage_service.dart';
-import 'package:usuario_inri/widgets/button_options.dart';
+import 'package:usuario/blocs/blocs.dart';
+import 'package:usuario/responsive/responsive_ui.dart';
+import 'package:usuario/service/addresses_service.dart';
+import 'package:usuario/service/message_service.dart';
+import 'package:usuario/service/storage_service.dart';
+import 'package:usuario/widgets/button_options.dart';
 
 
 

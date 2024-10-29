@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:usuario_inri/constants/constants.dart';
-import 'package:usuario_inri/responsive/responsive_ui.dart';
-import 'package:usuario_inri/widgets/button_pedir.dart';
-import 'package:usuario_inri/widgets/presentation_container.dart';
+import 'package:usuario/constants/constants.dart';
+import 'package:usuario/responsive/responsive_ui.dart';
+import 'package:usuario/widgets/button_pedir.dart';
+import 'package:usuario/widgets/presentation_container.dart';
 
 
 

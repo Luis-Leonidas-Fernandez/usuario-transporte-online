@@ -4,10 +4,10 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-import 'package:usuario_inri/global/environment.dart';
-import 'package:usuario_inri/models/login.dart';
-import 'package:usuario_inri/models/usuario.dart';
-import 'package:usuario_inri/service/storage_service.dart';
+import 'package:usuario/global/environment.dart';
+import 'package:usuario/models/login.dart';
+import 'package:usuario/models/usuario.dart';
+import 'package:usuario/service/storage_service.dart';
 
 
 class AuthService with ChangeNotifier {

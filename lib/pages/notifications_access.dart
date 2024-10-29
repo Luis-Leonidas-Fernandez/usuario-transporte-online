@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:usuario_inri/blocs/blocs.dart';
-import 'package:usuario_inri/pages/alarm_page.dart';
+import 'package:usuario/blocs/blocs.dart';
+import 'package:usuario/pages/alarm_page.dart';
 
 
 class NotificationsAccessPage extends StatelessWidget {
