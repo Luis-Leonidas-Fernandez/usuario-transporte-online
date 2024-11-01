@@ -8,8 +8,10 @@ import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:usuario/pages/alarm_page.dart';
+import 'package:usuario/pages/info_profile.dart';
 
 import 'package:usuario/pages/notifications_access.dart';
+import 'package:usuario/pages/order_register.dart';
 import 'package:usuario/pages/privacy_page.dart';
 import 'package:usuario/providers/login_form_validar.dart';
 import 'package:usuario/routes/routes.dart';
@@ -91,7 +93,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'usuario inri',
-      initialRoute: 'splash', //aqui poner login
+      initialRoute: 'order', //aqui poner login
       routes: {
         'login'   : (BuildContext context) => const LoginPage(),
         'privacy' : (BuildContext context) => const PrivacyPage(),
@@ -102,6 +104,8 @@ class MyApp extends StatelessWidget {
         'notification': (BuildContext context) => const NotificationsAccessPage(),
         'alarm'   : (BuildContext context)     => const AlarmAccessPage(),
         'splash': (BuildContext context) => const SplashScreen(),
+        'info': (BuildContext context) => const InfoProfile(),
+        'order': (BuildContext context) => const OrderRegister(),
         
       },
       theme: ThemeData.light().copyWith(

@@ -63,15 +63,15 @@ class RegisterPage extends StatelessWidget {
                 ),
         
                 Positioned(
-                  top: height * 0.30,
+                  top: height * 0.23,
                   left: 10.0,
                   right: 10.0,
                   child: Container(
                    width: 250,
-                   height: 140,         
+                   height: 250,         
                    decoration: const BoxDecoration(                
                    image: DecorationImage(
-                   image: AssetImage('assets/car_b.png'),                
+                   image: AssetImage('assets/truck_b.png'),                
                 ),
                 
                 ),

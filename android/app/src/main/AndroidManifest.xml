@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.luisleonidasfernandez.flutterinri">
+    package="com.luisleonidasfernandez.dueloenvios">
 
      <uses-permission android:name="android.permission.INTERNET"/>
       
@@ -16,7 +16,7 @@
     
 
    <application
-        android:label="Inri"
+        android:label="Duelo envios"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
         android:enableOnBackInvokedCallback="true"

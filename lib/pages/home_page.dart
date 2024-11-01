@@ -88,13 +88,6 @@ class _HomePageState extends State<HomePage> {
               stream: addressBloc.getOrderUser(),
               builder: (context, AsyncSnapshot<OrderUser> snapshot) {
 
-              //final order = snapshot.data; 
-
-              //final existOrder = addressBloc.state.existOrder!;
-              //final isAccepted = addressBloc.state.isAccepted!;
-
-                       
-
                 return SingleChildScrollView(
                  
                   child: Stack(              
@@ -102,42 +95,14 @@ class _HomePageState extends State<HomePage> {
                     children: [
               
                       usuarioBloc.state.usuario != null ?
-                      MapViewOrder(initialLocation: LatLng( lat, long) )// IS ACCEPTED = TRUE
+                      MapViewOrder(initialLocation: LatLng( lat, long))// IS ACCEPTED = TRUE
                       : Container(),     
                                             
                        height < 778 ?
                       const SmallBookingCard()
                       : BookingCard() ,
 
-
-                      const CarImage()
-                      //existOrder == false && order?.id == null?
-                      //Container() //IS ACCEPTED= FALSE
-                      //: CardView(orderUser: order!, usuario: usuario), //IS ACCEPTED = TRUE
-                       
-                      //BUTTONS
-
-                      //existOrder == true && isAccepted ==  false ?                       
-                      //BtnFinishTravel(messageService: messageService) //IS ACCEPTED = TRUE
-                      //: Container(), // IS ACCEPTED = FALSE
-                      
-
-                      //existOrder == true && isAccepted  ==  false ?                       
-                      //BtnCancelTravel(messageService: messageService) //IS ACCEPTED = TRUE
-                      //: Container(), // IS ACCEPTED = FALSE                      
-                      
-
-                      //existOrder == false && isAccepted == false?
-                       //ReservarButton(messageService: messageService) // IS ACCEPTED = FALSE
-                      //: Container(), // IS ACCEPTED = TRUE 
-
-
-                      //existOrder == false && isAccepted == true?                      
-                      //TimeLineAddress(messageService: messageService) // IS ACCEPTED = FALSE
-                      //: Container(),
-
-                     //const BtnMyTracking(), 
-                    
+                      const CarImage()    
               
                  ],
                 ), 

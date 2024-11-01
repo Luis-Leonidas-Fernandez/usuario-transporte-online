@@ -18,7 +18,7 @@ class CarImage extends StatelessWidget {
         height: 140,         
         decoration: const BoxDecoration(                
             image: DecorationImage(
-                image: AssetImage('assets/car_b.png'),                
+                image: AssetImage('assets/trunck_b.png'),                
               ),
               
               ),

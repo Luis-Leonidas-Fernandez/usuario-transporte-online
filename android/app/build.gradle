@@ -35,7 +35,7 @@ if (keystorePropertiesFile.exists()) {
 android {
     
     compileSdkVersion 34  
-    namespace 'com.luisleonidasfernandez.flutterinri'    
+    namespace 'com.luisleonidasfernandez.dueloenvios'    
     
     compileOptions {        
     sourceCompatibility JavaVersion.VERSION_17
@@ -47,14 +47,14 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.luisleonidasfernandez.flutterinri"
+        applicationId "com.luisleonidasfernandez.dueloenvios"
         minSdkVersion 21 
         //flutter.minSdkVersion
         targetSdkVersion 34 
         //flutter.targetSdkVersion
-        versionCode 6         
+        versionCode 1         
         //flutterVersionCode.toInteger()
-        versionName "2.0.0"
+        versionName "1.0.0"
         //flutterVersionName
         manifestPlaceholders['foregroundServiceType'] = 'location'
     }

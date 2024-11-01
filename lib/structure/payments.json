@@ -1,0 +1,11 @@
+{
+
+    "paymentMethod": {
+      "cardInfo": {
+        "cardNumber": "5456-8880-9115-4657",
+        "cardHolderName": "Marc jhon Smith",
+        "expiryDate": "0632"
+      },
+      "otherOptions": ["PayPal", "Transferencia Bancaria"] 
+    }
+  }  

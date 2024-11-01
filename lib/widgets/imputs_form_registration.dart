@@ -7,14 +7,14 @@ import 'package:usuario/providers/login_form_validar.dart';
 import 'package:usuario/widgets/alert_screen.dart';
 import 'package:usuario/widgets/btn_reusable.dart';
 
-class ImputsRegister extends StatefulWidget {
-  const ImputsRegister({super.key});
+class ImputFormRegistration extends StatefulWidget {
+  const ImputFormRegistration({super.key});
 
   @override
-  State<ImputsRegister> createState() => _ImputsRegisterState();
+  State<ImputFormRegistration> createState() => _ImputFormRegistrationState();
 }
 
-class _ImputsRegisterState extends State<ImputsRegister> {
+class _ImputFormRegistrationState extends State<ImputFormRegistration> {
   final nameCtrl = TextEditingController();
   final emailCtrl = TextEditingController();
   final passCtrl = TextEditingController();
@@ -60,7 +60,7 @@ class _ImputsRegisterState extends State<ImputsRegister> {
                     padding:
                         const EdgeInsets.symmetric(horizontal: 2, vertical: 2),
                     child: Icon(
-                      Icons.person,
+                      Icons.account_box,
                       color: Colors.white,
                       size: screenHeight <= 380 ? 18 : 30,
                     ),
@@ -85,7 +85,7 @@ class _ImputsRegisterState extends State<ImputsRegister> {
                         keyboardType: TextInputType.text,
                         style: const TextStyle(color: Colors.white),
                         decoration: InputDecoration(
-                          hintText: 'Nombre Completo',
+                          hintText: 'DNI',
                           hintStyle: TextStyle(
                               color: Colors.grey,
                               fontSize: screenHeight <= 346 ? 10 : 16,
@@ -131,7 +131,7 @@ class _ImputsRegisterState extends State<ImputsRegister> {
                     padding:
                         const EdgeInsets.symmetric(horizontal: 2, vertical: 2),
                     child: Icon(
-                      Icons.email,
+                      Icons.phone,
                       color: Colors.white,
                       size: screenHeight <= 380 ? 18 : 30,
                     ),
@@ -156,7 +156,7 @@ class _ImputsRegisterState extends State<ImputsRegister> {
                         keyboardType: TextInputType.emailAddress,
                         style: const TextStyle(color: Colors.white),
                         decoration: InputDecoration(
-                          hintText: 'Correo',
+                          hintText: 'telefono',
                           hintStyle: TextStyle(
                               color: Colors.grey,
                               fontSize: screenHeight <= 346 ? 10 : 16,
@@ -212,7 +212,7 @@ class _ImputsRegisterState extends State<ImputsRegister> {
                     padding:
                         const EdgeInsets.symmetric(horizontal: 2, vertical: 2),
                     child: Icon(
-                      Icons.key,
+                      Icons.home,
                       color: Colors.white,
                       size: screenHeight <= 380 ? 18 : 30,
                     ),
@@ -236,7 +236,7 @@ class _ImputsRegisterState extends State<ImputsRegister> {
                         keyboardType: TextInputType.emailAddress,
                         style: const TextStyle(color: Colors.white),
                         decoration: InputDecoration(
-                          hintText: 'Contraseña',
+                          hintText: 'direccion',
                           hintStyle: TextStyle(
                               color: Colors.grey,
                               fontSize: screenHeight <= 346 ? 10 : 16,
@@ -258,6 +258,222 @@ class _ImputsRegisterState extends State<ImputsRegister> {
             ],
           ),
         ),
+         SizedBox(height: screenHeight <= 641 ? 6 : 10),
+        Container(
+          width: 372,
+          height: screenHeight <= 640 ? 50 : 55,
+          decoration: BoxDecoration(
+              border: Border.all(
+                  color:
+                      const Color.fromARGB(255, 251, 250, 252).withOpacity(0.9),
+                  width: 1.4),
+              color: const Color.fromARGB(255, 2, 2, 2),
+              borderRadius: BorderRadius.circular(10)),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                child: Container(
+                  constraints:
+                      const BoxConstraints(maxWidth: 38, minHeight: 36),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    gradient: LinearGradient(colors: [
+                      const Color.fromARGB(188, 126, 124, 250).withOpacity(0.5),
+                      const Color.fromARGB(188, 126, 124, 250),
+                    ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
+                  ),
+                  child: Padding(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 2, vertical: 2),
+                    child: Icon(
+                      Icons.apartment,
+                      color: Colors.white,
+                      size: screenHeight <= 380 ? 18 : 30,
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(width: 4),
+              Align(
+                alignment: const Alignment(0.0, 0.5),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8),
+                  child: Container(
+                    constraints:
+                        const BoxConstraints(maxWidth: 277, maxHeight: 24),
+                    color: Colors.transparent,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 3),
+                      child: TextFormField(
+                        cursorColor: Colors.white,
+                        controller: nameCtrl,
+                        autocorrect: false,
+                        keyboardType: TextInputType.text,
+                        style: const TextStyle(color: Colors.white),
+                        decoration: InputDecoration(
+                          hintText: 'Nombre de Empresa (opcional)',
+                          hintStyle: TextStyle(
+                              color: Colors.grey,
+                              fontSize: screenHeight <= 346 ? 10 : 16,
+                              fontWeight: FontWeight.w400,
+                              letterSpacing: 0.5),
+                          border: InputBorder.none,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              )
+            ],
+          ),
+        ),
+
+         SizedBox(height: screenHeight <= 641 ? 6 : 10),
+        Container(
+          width: 372,
+          height: screenHeight <= 640 ? 50 : 55,
+          decoration: BoxDecoration(
+              border: Border.all(
+                  color:
+                      const Color.fromARGB(255, 251, 250, 252).withOpacity(0.9),
+                  width: 1.4),
+              color: const Color.fromARGB(255, 2, 2, 2),
+              borderRadius: BorderRadius.circular(10)),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                child: Container(
+                  constraints:
+                      const BoxConstraints(maxWidth: 38, minHeight: 36),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    gradient: LinearGradient(colors: [
+                      const Color.fromARGB(188, 126, 124, 250).withOpacity(0.5),
+                      const Color.fromARGB(188, 126, 124, 250),
+                    ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
+                  ),
+                  child: Padding(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 2, vertical: 2),
+                    child: Icon(
+                      Icons.location_on,
+                      color: Colors.white,
+                      size: screenHeight <= 380 ? 18 : 30,
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(width: 4),
+              Align(
+                alignment: const Alignment(0.0, 0.5),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8),
+                  child: Container(
+                    constraints:
+                        const BoxConstraints(maxWidth: 277, maxHeight: 24),
+                    color: Colors.transparent,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 3),
+                      child: TextFormField(
+                        cursorColor: Colors.white,
+                        controller: nameCtrl,
+                        autocorrect: false,
+                        keyboardType: TextInputType.text,
+                        style: const TextStyle(color: Colors.white),
+                        decoration: InputDecoration(
+                          hintText: 'Dirección de Empresa (opcional)',
+                          hintStyle: TextStyle(
+                              color: Colors.grey,
+                              fontSize: screenHeight <= 346 ? 10 : 16,
+                              fontWeight: FontWeight.w400,
+                              letterSpacing: 0.5),
+                          border: InputBorder.none,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              )
+            ],
+          ),
+        ),
+
+         SizedBox(height: screenHeight <= 641 ? 6 : 10),
+        Container(
+          width: 372,
+          height: screenHeight <= 640 ? 50 : 55,
+          decoration: BoxDecoration(
+              border: Border.all(
+                  color:
+                      const Color.fromARGB(255, 251, 250, 252).withOpacity(0.9),
+                  width: 1.4),
+              color: const Color.fromARGB(255, 2, 2, 2),
+              borderRadius: BorderRadius.circular(10)),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                child: Container(
+                  constraints:
+                      const BoxConstraints(maxWidth: 38, minHeight: 36),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    gradient: LinearGradient(colors: [
+                      const Color.fromARGB(188, 126, 124, 250).withOpacity(0.5),
+                      const Color.fromARGB(188, 126, 124, 250),
+                    ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
+                  ),
+                  child: Padding(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 2, vertical: 2),
+                    child: Icon(
+                      Icons.article,
+                      color: Colors.white,
+                      size: screenHeight <= 380 ? 18 : 30,
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(width: 4),
+              Align(
+                alignment: const Alignment(0.0, 0.5),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8),
+                  child: Container(
+                    constraints:
+                        const BoxConstraints(maxWidth: 277, maxHeight: 24),
+                    color: Colors.transparent,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 3),
+                      child: TextFormField(
+                        cursorColor: Colors.white,
+                        controller: nameCtrl,
+                        autocorrect: false,
+                        keyboardType: TextInputType.text,
+                        style: const TextStyle(color: Colors.white),
+                        decoration: InputDecoration(
+                          hintText: 'C.U.I.T de Empresa (opcional)',
+                          hintStyle: TextStyle(
+                              color: Colors.grey,
+                              fontSize: screenHeight <= 346 ? 10 : 16,
+                              fontWeight: FontWeight.w400,
+                              letterSpacing: 0.5),
+                          border: InputBorder.none,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              )
+            ],
+          ),
+        ), 
+
         SizedBox(height: screenHeight < 650 ? 10 : 20),
 
         ButtonReusable(

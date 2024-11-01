@@ -1,4 +1,4 @@
-package com.luisleonidasfernandez.flutterinri
+package com.luisleonidasfernandez.dueloenvios
 
 import io.flutter.embedding.android.FlutterActivity
 
