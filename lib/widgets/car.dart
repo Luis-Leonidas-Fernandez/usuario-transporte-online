@@ -10,15 +10,15 @@ class CarImage extends StatelessWidget {
     final screenHeight = MediaQuery.of(context).size.height;  
 
     return Positioned(
-      top: screenHeight * 0.41,
+      top: screenHeight * 0.38,
       left: 35,
       right: 35,
       child: Container(        
-        width: 250,
-        height: 140,         
+        width: 320,
+        height: 200,         
         decoration: const BoxDecoration(                
             image: DecorationImage(
-                image: AssetImage('assets/trunck_b.png'),                
+                image: AssetImage('assets/truck_b.png'),                
               ),
               
               ),

@@ -20,7 +20,7 @@ import 'package:usuario/service/location_service.dart';
   final existUserIdAndToken = await LocationService.instance.getIdUserAndToken(); 
   
   // ignore: avoid_print
-  print("exist order: $isActiveOrder exist user : $existUserIdAndToken");
+  
 
     if (isActiveOrder && existUserIdAndToken) {
         

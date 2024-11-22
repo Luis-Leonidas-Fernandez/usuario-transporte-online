@@ -87,7 +87,7 @@ class _FormImputsState extends State<FormImputs> {
   Widget build(BuildContext context) {
   
   ResponsiveUtil responsiveUtil = ResponsiveUtil(context);
-  double responsiveHeight = responsiveUtil.getResponsiveHeight(0.10);
+  double responsiveHeight = responsiveUtil.getResponsiveHeight(0.12);
   
 
   return SingleChildScrollView(
@@ -96,7 +96,8 @@ class _FormImputsState extends State<FormImputs> {
       color: Colors.transparent,
       child: Column(
   children: [
-    Text('Registrar Pedido',
+    SizedBox(height: 10),
+    Text('Publicar Pedido',
         style: GoogleFonts.roboto(
             fontSize: 28,
             color: AppConstants.textColor,

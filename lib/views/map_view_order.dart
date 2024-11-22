@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:provider/provider.dart';
 import 'package:latlong2/latlong.dart';
@@ -48,7 +49,13 @@ class _MapViewOrderState extends State<MapViewOrder> {
   }
   
   @override
-  Widget build(BuildContext context) {  
+  Widget build(BuildContext context) { 
+
+    String urlMapBox = dotenv.get('MAPBOX_URL');
+    String tokenMapBox = dotenv.get('TOKEN_MAP_BOX');
+    String idMapBox = dotenv.get('ID_MAPBOX');   
+   
+   
     
     final  usuario      = Provider.of<AuthBloc>(context).state.usuario;
 
@@ -74,7 +81,7 @@ class _MapViewOrderState extends State<MapViewOrder> {
         child: FlutterMap(          
           mapController: _mapController,          
           options: MapOptions( 
-            initialCenter:  center,            
+            initialCenter: center,            
             initialZoom: zoom,
             minZoom: 1.0,
             maxZoom: 20.0,            
@@ -83,10 +90,13 @@ class _MapViewOrderState extends State<MapViewOrder> {
           children: [
 
             TileLayer(
-              urlTemplate: usuario.urlMapbox,
+              urlTemplate: urlMapBox,
+              //usuario.urlMapbox,
               additionalOptions: {               
-                'accessToken': usuario.tokenMapBox,
-                'id': usuario.idMapBox,
+                'accessToken': tokenMapBox, 
+                //usuario.tokenMapBox,
+                'id': idMapBox
+                //usuario.idMapBox,
               },
               
             ),
@@ -106,7 +116,7 @@ class _MapViewOrderState extends State<MapViewOrder> {
                  ) 
                 ),
                 
-                if (location.isNotEmpty)               
+               if (location.isNotEmpty)               
                 Marker(                  
                   point: LatLng(location[1], location[0]),
                   width: 110,
@@ -116,7 +126,7 @@ class _MapViewOrderState extends State<MapViewOrder> {
                   color: Colors.transparent,
                   child: Image.asset('assets/driver.png'),                  
                  ) 
-                )                
+                )              
                   
               ],            
             ),

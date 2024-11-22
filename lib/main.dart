@@ -3,16 +3,20 @@ import 'package:flutter/material.dart';
 
 
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:usuario/pages/alarm_page.dart';
+import 'package:usuario/pages/auctions.dart';
 import 'package:usuario/pages/info_profile.dart';
 
 import 'package:usuario/pages/notifications_access.dart';
+import 'package:usuario/pages/order_page.dart';
 import 'package:usuario/pages/order_register.dart';
 import 'package:usuario/pages/privacy_page.dart';
+import 'package:usuario/pages/shipping_details.dart';
 import 'package:usuario/providers/login_form_validar.dart';
 import 'package:usuario/routes/routes.dart';
 import 'package:usuario/service/addresses_service.dart';
@@ -30,9 +34,9 @@ import 'package:usuario/splash/splash_screen.dart';
 
 
 
-void main() async{
+Future<void> main() async{
      
-     //proyecto final usuarios inri
+     //proyecto final usuarios duelo envios
      WidgetsFlutterBinding.ensureInitialized();
      
       await AndroidAlarmManager.initialize();     
@@ -52,10 +56,11 @@ void main() async{
     numberFormatSymbols['es_ARG'] = enUS.copyWith(
       currencySymbol: r'$',
     );
+    
 
-    
-    
-    
+    await dotenv.load(fileName: ".env");   
+
+
 runApp(
 
     MultiProvider(
@@ -92,8 +97,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'usuario inri',
-      initialRoute: 'order', //aqui poner login
+      title: 'usuario duelo envios',
+      initialRoute: 'orders', //aqui poner login
       routes: {
         'login'   : (BuildContext context) => const LoginPage(),
         'privacy' : (BuildContext context) => const PrivacyPage(),
@@ -106,6 +111,9 @@ class MyApp extends StatelessWidget {
         'splash': (BuildContext context) => const SplashScreen(),
         'info': (BuildContext context) => const InfoProfile(),
         'order': (BuildContext context) => const OrderRegister(),
+        'detail': (BuildContext context) => const ShippingDetails(),
+        'auctions': (BuildContext context) => const Auctions(),
+        'orders': (BuildContext context) => const OrderPage(),// todas las ordenes
         
       },
       theme: ThemeData.light().copyWith(

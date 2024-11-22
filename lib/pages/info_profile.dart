@@ -95,7 +95,7 @@ class _FormImputsState extends State<FormImputs> {
       color: Colors.transparent,
       child: Column(
   children: [
-    Text('Formulario de Inscripción',
+    Text('Completa tu registro',
         style: GoogleFonts.roboto(
             fontSize: 28,
             color: AppConstants.textColor,

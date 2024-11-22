@@ -53,6 +53,7 @@ dependencies:
   android_alarm_manager_plus: ^4.0.3
   hexcolor: ^3.0.1
   google_fonts: ^6.2.1
+  flutter_dotenv: ^5.2.1
   
 
 dev_dependencies:
@@ -79,6 +80,9 @@ flutter:
     - assets/background_image.png
     - assets/logo.png
     - assets/truck_b.png
+    - assets/data.json
+    - .env
+  
 
 
   #   - images/a_dot_ham.jpeg

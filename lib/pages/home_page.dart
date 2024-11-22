@@ -8,8 +8,6 @@ import 'package:usuario/constants/app_bar.dart';
 
 import 'package:usuario/models/address.dart';
 import 'package:usuario/models/usuario.dart';
-//import 'package:usuario_inri/service/message_service.dart';
-
 
 import 'package:usuario/views/circular_progress_view.dart';
 import 'package:usuario/views/map_view_order.dart';
@@ -32,7 +30,7 @@ class _HomePageState extends State<HomePage> {
   LocationBloc? locationBloc;
   AuthBloc? usuarioBloc;
   Usuario? usuario;
-  //final MessageService messageService = MessageService();
+ 
   
   @override
   void initState() {
@@ -71,15 +69,14 @@ class _HomePageState extends State<HomePage> {
     
     return Scaffold(
       extendBodyBehindAppBar: true, 
-
-      appBar: AppBarConstants.customAppBar(context),
+      appBar: AppBarConstants.customAppBar(context),     
     
       body: BlocBuilder<LocationBloc, LocationState>(
         builder: (context, state) {
 
           
           if(state.lastKnownLocation == null || usuario == null)  return CircularProgress();
-                    
+                
           final long = (state.lastKnownLocation!.longitude);
           final lat  = state.lastKnownLocation!.latitude;          
          
@@ -95,6 +92,7 @@ class _HomePageState extends State<HomePage> {
                     children: [
               
                       usuarioBloc.state.usuario != null ?
+                      
                       MapViewOrder(initialLocation: LatLng( lat, long))// IS ACCEPTED = TRUE
                       : Container(),     
                                             

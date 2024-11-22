@@ -50,10 +50,7 @@ class _BookingCardState extends State<BookingCard> {
     final authBloc = BlocProvider.of<AuthBloc>(context);
     final addressBloc = BlocProvider.of<AddressBloc>(context);
     final locationBloc = BlocProvider.of<LocationBloc>(context);
-
-    final idOrder = addressBloc.state.orderUser?.id is String ? addressBloc.state.orderUser?.id : 1;
-
-    print("bloc id order: $idOrder");
+  
     final isAccepted = addressBloc.state.isAccepted!;  
    
 
@@ -91,6 +88,7 @@ class _BookingCardState extends State<BookingCard> {
               decoration: BoxDecoration(
                   gradient: LinearGradient(colors: [
                 AppConstants.cardColor.withAlpha(2),
+                AppConstants.cardColor,
                 AppConstants.cardColor,
               ], begin: Alignment.topCenter, end: Alignment.center)),
             ),
@@ -135,6 +133,8 @@ class _BookingCardState extends State<BookingCard> {
             ),
           ),
 
+          
+
 
           Positioned(
               top: 115,
@@ -143,23 +143,17 @@ class _BookingCardState extends State<BookingCard> {
               child: Container(
                   color: Colors.transparent,
                   child: BlocBuilder<AddressBloc, AddressState>(
-                    builder: (context, stateAddress) {                     
-                      
+                    builder: (context, stateAddress) {
 
-                      /* if (stateAddress.existOrder == false && stateAddress.isAccepted == false) {
-                      return PresentationContainer();
-                      } else if (stateAddress.isAccepted == true ) {
-                      return TimeLineAddress();
-                      } else if (stateAddress.orderUser != null) {
-                      return ContainerDetail();
-                      }
-                      return Container();  */// Estado por defecto o error
+                      final existDriver = stateAddress.orderUser?.ok ?? false;
+                      print("exist driver: $existDriver");
 
-                      if( idOrder is String) {
+                      if( existDriver == true) {
 
-                        print("id order: $idOrder");
+                        print("Exist Driver Container detail: $existDriver");
                         return ContainerDetail();
-                      } else if(stateAddress.isAccepted == true){
+                      } else if(stateAddress.isAccepted == true && existDriver == false){
+                        print("Exist Driver : Time Line Address: $existDriver");
                         return TimeLineAddress();
                       }
                       return PresentationContainer();
@@ -172,7 +166,7 @@ class _BookingCardState extends State<BookingCard> {
           
           isAccepted == false ?
           Positioned(
-              top: screenHeight * 0.40,
+              top: screenHeight * 0.35,
               left: 20,
               right: 20,
               child: ButtonReusable(
@@ -231,7 +225,7 @@ class _BookingCardState extends State<BookingCard> {
                 )
               )
               : Positioned(
-              top: screenHeight * 0.40,
+              top: screenHeight * 0.35,
               left: 20,
               right: 20,
               child: ButtonReusable(
@@ -239,7 +233,7 @@ class _BookingCardState extends State<BookingCard> {
                   onPressed: () async {
 
                     // ignore: avoid_print
-                    print("button pedir tap");                   
+                                   
 
                     //extrae token y idUser del State
                   final String? token = authBloc.state.usuario?.token; 
@@ -265,8 +259,12 @@ class _BookingCardState extends State<BookingCard> {
                   Navigator.pushReplacementNamed(context, 'notification');
                   }
                 )
-              )  
+              ),
 
+              
+              Positioned(
+                top: 20,
+                child: ButtonBar())  ,
 
 
         ]

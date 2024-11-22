@@ -1,0 +1,69 @@
+[
+  {
+  "productos": [
+    {
+    "id": "lpldsf5148dpl",
+    "tipoCarga": "Carga refrigerada",
+    "peso": "1000 kg",
+    "tamaño": "15x50x12",
+    "estadoSubasta": "abierto"
+  },
+  {
+    "id": "plijmsjhejn2514kdjdj",
+    "tipoCarga": "Carga explosiva",
+    "peso": "900.000 kg",
+    "tamaño": "15x50x12",
+    "estadoSubasta": "abierto"
+  },
+  {
+    "id": "mbhrosnucv52648kdijjs",
+    "tipoCarga": "Carga vehiculos",
+    "peso": "100.000 kg",
+    "tamaño": "15x50x12",
+    "estadoSubasta": "abierto"
+  },
+  {
+    "id": "fbcvdol34628pñkah",
+    "tipoCarga": "Carga mascotas",
+    "peso": "5000 kg",
+    "tamaño": "15x50x12",
+    "estadoSubasta": "abierto"
+  }
+],
+  "ofertas": [
+    {
+      "idProducto": "lpldsf5148dpl",
+      "name": "Pablo E. Robledo",
+      "domicilio": "Resistencia Chaco",
+      "licencia": "Licencia Profesional",
+      "precio": "850.000",
+      "vehiculo": "Mercedez Benz",
+      "patente": "FG842LM",
+      "modelo": "Modelo 2018",
+      "capacidadDeCarga": "5.500 kg"
+    },
+    {
+      "idProducto": "lpldsf5148dpl",
+      "name": "Manuel D. Quintana",
+      "domicilio": "Mendoza capital",
+      "licencia": "Licencia Profesional",
+      "oferta": "350.000",
+      "vehiculo": "Mercedez Benz",
+      "patente": "QW768BV",
+      "modelo": "Modelo 2003",
+      "capacidadDeCarga": "80.500 kg"
+    },
+    {
+      "idProducto": "ujyennd5624pokld",
+      "name": "Roque M. Rodriguez",
+      "domicilio": "Corrientes capital",
+      "licencia": "Licencia Profesional",
+      "oferta": "450.000",
+      "vehiculo": "Mercedez Benz HW",
+      "patente": "AA325OP",
+      "modelo": "Modelo 2024",
+      "capacidadDeCarga": "10.500 kg"
+    }
+  ]
+}
+]
