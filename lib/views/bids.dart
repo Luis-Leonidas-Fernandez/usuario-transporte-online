@@ -23,7 +23,7 @@ class BidsDetails extends StatelessWidget {
         Container(
           color: Color.fromARGB(34, 255, 255, 255),
           width: width * 0.9,
-          height: 200,
+          height: 220,
           child: Column(children: [
 
             SizedBox(height: 18),
@@ -46,7 +46,7 @@ class BidsDetails extends StatelessWidget {
             Align(
               alignment: const Alignment(-0.78, -0.7),
               child: Text(
-                conductor.name,
+                conductor.name ?? '',
                 style: GoogleFonts.roboto(
                     fontSize: 15,
                     color: AppConstants.textColor,
@@ -60,7 +60,20 @@ class BidsDetails extends StatelessWidget {
               Align(
               alignment: const Alignment(-0.77, -0.7),
               child: Text(
-                conductor.domicilio,
+                '${conductor.domicilio?.provincia ?? ''} ${conductor.domicilio?.ciudad ?? ''}',
+                style: GoogleFonts.roboto(
+                    fontSize: 15,
+                    color: AppConstants.textColor,
+                    decoration: TextDecoration.none,
+                    letterSpacing: 0.4),
+              ),
+            ),
+             SizedBox(height: 5),
+
+              Align(
+              alignment: const Alignment(-0.77, -0.7),
+              child: Text(
+                '${conductor.domicilio?.calle?? ''} ${conductor.domicilio?.altura?? ''}',
                 style: GoogleFonts.roboto(
                     fontSize: 15,
                     color: AppConstants.textColor,
@@ -74,7 +87,7 @@ class BidsDetails extends StatelessWidget {
               Align(
               alignment: const Alignment(-0.75, -0.7),
               child: Text(
-                conductor.licencia,
+                conductor.licencia ?? '',
                 style: GoogleFonts.roboto(
                     fontSize: 15,
                     color: AppConstants.textColor,
@@ -88,7 +101,7 @@ class BidsDetails extends StatelessWidget {
               Align(
               alignment: const Alignment(-0.77, -0.7),
               child: Text(
-                'Oferta: \$ ${conductor.oferta}',
+                'Oferta: \$ ${conductor.precio?.valor ?? ''}',
                 style: GoogleFonts.roboto(
                     fontSize: 15,
                     color: AppConstants.textColor,
@@ -131,7 +144,7 @@ class BidsDetails extends StatelessWidget {
             Align(
               alignment: const Alignment(-0.77, -0.7),
               child: Text(
-                conductor.vehiculo,
+                conductor.vehiculo ?? '',
                 style: GoogleFonts.roboto(
                     fontSize: 15,
                     color: AppConstants.textColor,
@@ -159,7 +172,7 @@ class BidsDetails extends StatelessWidget {
               Align(
               alignment: const Alignment(-0.78, -0.7),
               child: Text(
-                conductor.modelo,
+                conductor.modelo ??'',
                 style: GoogleFonts.roboto(
                     fontSize: 15,
                     color: AppConstants.textColor,
@@ -171,9 +184,9 @@ class BidsDetails extends StatelessWidget {
             SizedBox(height: 5),
 
               Align(
-              alignment: const Alignment(-0.62, -0.7),
+              alignment: const Alignment(-0.50, -0.7),
               child: Text(
-                'Capacidad de carga ${conductor.capacidadDeCarga}',
+                'Capacidad de carga: ${conductor.capacidadDeCarga?.peso ?? ''}  ${conductor.capacidadDeCarga?.unidadPeso ?? ''}',
                 style: GoogleFonts.roboto(
                     fontSize: 15,
                     color: AppConstants.textColor,

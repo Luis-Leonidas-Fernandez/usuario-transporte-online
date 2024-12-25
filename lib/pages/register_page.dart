@@ -8,7 +8,7 @@ import 'package:usuario/constants/constants.dart';
 import 'package:usuario/pages/login_page.dart';
 import 'package:usuario/providers/login_form_validar.dart';
 import 'package:usuario/responsive/responsive_ui.dart';
-import 'package:usuario/widgets/imput_register.dart';
+import 'package:usuario/widgets/imput_user_register.dart';
 
 
 

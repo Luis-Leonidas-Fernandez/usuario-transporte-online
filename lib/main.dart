@@ -78,7 +78,7 @@ runApp(
           BlocProvider(create: (context) => AddressBloc(addressService: AddressService(), authBloc: BlocProvider.of<AuthBloc>(context)) ),        
           BlocProvider(create: (context) => MapBloc(locationBloc: BlocProvider.of<LocationBloc>(context),
          addressBloc: BlocProvider.of<AddressBloc>(context),)),
-         
+         BlocProvider(create: (context) => NavigatorBloc()),
           
         ],
       

@@ -5,5 +5,6 @@ export 'package:usuario/blocs/map/map_bloc.dart';
 export 'package:usuario/blocs/notification/notification_bloc.dart';
 export 'package:usuario/blocs/user/auth_bloc.dart';
 export 'package:usuario/blocs/alarm/alarm_bloc.dart';
+export 'package:usuario/blocs/navigator/navigator_bloc.dart';
 
 

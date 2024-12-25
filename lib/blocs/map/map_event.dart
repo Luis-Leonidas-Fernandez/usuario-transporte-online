@@ -18,8 +18,11 @@ class OnStartFollowingUserEvent extends MapEvent {}
 
 // se creo el evento que guarda las address
 class OnAddAddressEvent extends MapEvent {}
+// Definir nuevo evento para cuando el mapa esté listo
+class OnMapReadyEvent extends MapEvent {}
+// Mostrar el Card en el Mapa
+class OnCardReadyEvent extends MapEvent {}
 
-//class OnIsAcceptedTravel extends MapEvent{}
-//class OnIsDeclinedTravel extends MapEvent{}
+
 
 

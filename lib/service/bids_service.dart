@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
-import 'package:usuario/models/binds.dart'; // Ajusta el nombre del archivo
+import 'package:usuario/models/binds.dart'; 
 
 
 Future<List<Subasta>> cargarSubastas() async {
@@ -14,8 +14,8 @@ Future<List<Subasta>> cargarSubastas() async {
     // Validar que sea una lista
     if (jsonData is List) {
       // Convertir cada elemento en un objeto Subasta
-      return jsonData.map((json) => Subasta.fromJson(json)).toList();
-     
+      return jsonData.map((json) => Subasta.fromJson(json)).toList();      
+      
      
     } else {
       throw FormatException("El JSON no es una lista.");

@@ -9,8 +9,8 @@ import 'package:usuario/views/bids.dart';
 
 class Auctions extends StatefulWidget {
 
-
-  const Auctions({super.key});
+  final String? idProducto;
+  const Auctions({super.key, this.idProducto});
 
   @override
   State<Auctions> createState() => _AuctionsState();
@@ -60,9 +60,9 @@ class _AuctionsState extends State<Auctions> {
                 AppConstants.cardColor,
               ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
               child: Stack(
-                children: const [               
+                children: [               
                  
-                  ShippingContainers(),
+                  ShippingContainers(idProducto: widget.idProducto),
                   
                 ],
               ),
@@ -71,8 +71,9 @@ class _AuctionsState extends State<Auctions> {
 }
 
 class ShippingContainers extends StatefulWidget {
-
-  const ShippingContainers({super.key });
+  
+  final String? idProducto;
+  const ShippingContainers({super.key, this.idProducto });
 
   @override
   State<ShippingContainers> createState() => _ShippingContainersState();
@@ -90,10 +91,18 @@ class _ShippingContainersState extends State<ShippingContainers> {
   
 
   Future<List<Oferta>> _cargarOfertas() async {
+
+    if (widget.idProducto == null || widget.idProducto!.isEmpty) {
+    return []; // Retorna una lista vacía si idProducto no está definido.
+    }
+
     // Cargar subastas
     final subastas = await cargarSubastas();    
     // Consolidar todas las ofertas en una sola lista
-    final ofertas = subastas.expand((subasta) => subasta.ofertas).toList();   
+    final ofertas = subastas
+    .expand((subasta) => subasta.ofertas)
+    .where((oferta) => oferta.idProducto == widget.idProducto)
+    .toList();   
     return ofertas;
   }
 

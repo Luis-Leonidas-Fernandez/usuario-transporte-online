@@ -30,7 +30,7 @@ import 'package:usuario/service/location_service.dart';
         const color   =  Color.fromARGB(255, 63, 81, 184);  
         final fecha   =   AppConstants.getFormattedDate();
         final hora    =   AppConstants.getFormattedTime();
-        const message =  'Felicitaciones ya tienes tu conductor!';
+        const message =  'Felicitaciones han llegado ofertas!';
 
         flutterLocalNotificationsPlugin.show(
          888,

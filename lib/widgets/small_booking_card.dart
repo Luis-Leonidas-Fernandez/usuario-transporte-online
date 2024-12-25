@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:usuario/blocs/blocs.dart';
 import 'package:usuario/constants/constants.dart';
 import 'package:usuario/responsive/responsive_ui.dart';
 import 'package:usuario/widgets/button_pedir.dart';
+import 'package:usuario/widgets/container_detail.dart';
 import 'package:usuario/widgets/presentation_container.dart';
+import 'package:usuario/widgets/widgets.dart';
 
 
 
@@ -24,6 +28,7 @@ class _SmallBookingCardState extends State<SmallBookingCard> {
     ResponsiveUtil responsiveUtil = ResponsiveUtil(context);
     double responsiveFontSize = responsiveUtil.getResponsiveFontSize(30);   
     double responsiveTop = responsiveUtil.getResponsiveHeight(0.51);
+   
 
     return Positioned(
       top: responsiveTop,
@@ -78,7 +83,7 @@ class _SmallBookingCardState extends State<SmallBookingCard> {
             ),
           ), 
            Positioned(
-            top: 57,
+            top: 25,
             left: 20,
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -89,7 +94,7 @@ class _SmallBookingCardState extends State<SmallBookingCard> {
                   'Detalle Viaje',
                   style: TextStyle(
                       color: Colors.white,
-                      fontSize: responsiveFontSize,
+                      fontSize: 18,
                       fontWeight: FontWeight.w600),
                 ),
                 SizedBox(width: screenWidth <=370 ? 55: 70),
@@ -106,7 +111,7 @@ class _SmallBookingCardState extends State<SmallBookingCard> {
                     'Cupon',
                     style: TextStyle(
                         color: Colors.white,
-                        fontSize: responsiveFontSize,
+                        fontSize: 18,
                         fontWeight: FontWeight.w600),
                   ),
                   const SizedBox(width: 5),
@@ -124,16 +129,33 @@ class _SmallBookingCardState extends State<SmallBookingCard> {
             ),
           ),
            
-           Positioned(
-            top: 91,
-            left: 20,
-            right: 20,
-            child: Container(
-              color: Colors.transparent,
-              child: const PresentationContainer()
-              //const ContainerDetail()
-              //const TimeLineAddress()
-              )),
+            Positioned(
+              top: 70,
+              left: 20,
+              right: 20,
+              child: Container(
+                  color: Colors.transparent,
+                  child: BlocBuilder<AddressBloc, AddressState>(
+                    builder: (context, stateAddress) {
+
+                      final existDriver = stateAddress.orderUser?.ok ?? false;
+                     
+
+                      if( existDriver == true) {
+
+                       
+                        return ContainerDetail();
+                      } else if(stateAddress.isAccepted == true && existDriver == false){
+                       
+                        return TimeLineAddress();
+                      }
+                      return PresentationContainer();
+                    } 
+
+                    )
+                
+
+                  )),
         
               
            Positioned(

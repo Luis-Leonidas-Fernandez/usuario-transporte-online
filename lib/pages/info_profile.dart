@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:usuario/constants/constants.dart';
 import 'package:usuario/providers/login_form_validar.dart';
 import 'package:usuario/responsive/responsive_ui.dart';
-import 'package:usuario/widgets/imputs_form_registration.dart';
+import 'package:usuario/widgets/imputs_order_register.dart';
 
 class InfoProfile extends StatefulWidget {
   const InfoProfile({super.key});

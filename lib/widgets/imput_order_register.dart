@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-//import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
-//import 'package:usuario/blocs/user/auth_bloc.dart';
 import 'package:usuario/constants/constants.dart';
 import 'package:usuario/providers/login_form_validar.dart';
 import 'package:usuario/widgets/btn_reusable.dart';
