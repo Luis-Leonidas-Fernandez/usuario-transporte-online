@@ -49,11 +49,11 @@ class PresentationContainer extends StatelessWidget {
             Align(
               alignment: Alignment(-0.5, 0.0),
               child: Text(
-                "Descubre descuentos semanales y viaja con tranquilidad",
+                "Descubre descuentos semanales para tus envios a todo el país",
                 style: TextStyle(
                     color: Colors.white,
                     letterSpacing: 0.5,
-                    fontSize: 16,
+                    fontSize: 14,
                     fontWeight: FontWeight.w400),
               ),
             )

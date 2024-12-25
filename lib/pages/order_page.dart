@@ -18,16 +18,21 @@ class _OrderPageState extends State<OrderPage> {
     
 
     return Scaffold(
-        appBar: AppBar(
-            backgroundColor: AppConstants.cardColor,
-            elevation: 0,
-            title: Center(
-              child: Text('Ordenes',
-                  style: GoogleFonts.roboto(
-                      fontSize: 28,
-                      color: AppConstants.textColor,
-                      decoration: TextDecoration.none)),
-            )),
+        appBar: PreferredSize(
+          preferredSize: Size.fromHeight(50.0),
+          child: AppBar(
+              backgroundColor: AppConstants.cardColor,
+              elevation: 0,
+              centerTitle: true,
+              title: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 20.0),
+                child: Text('Ordenes',
+                    style: GoogleFonts.roboto(
+                        fontSize: 28,
+                        color: AppConstants.textColor,
+                        decoration: TextDecoration.none)),
+              )),
+        ),
         body: Container(
             width: double.infinity,
             height: double.infinity,
@@ -78,9 +83,10 @@ class _OrdersContainersState extends State<OrdersContainers> {
     try {
       // Cargar subastas
       final subastas = await cargarSubastas(); // Asume que cargarSubastas() devuelve List<Subasta>
-    
+     
       // Consolidar todos los productos en una sola lista
       final productos = subastas.expand((subasta) => subasta.productos).toList();
+    
       return productos;
     } catch (e) {
       // Manejo de errores
@@ -97,7 +103,7 @@ class _OrdersContainersState extends State<OrdersContainers> {
       color: Colors.transparent,
       child: Column(
         children: [
-          SizedBox(height: 18),
+          SizedBox(height: 10),
           
           Expanded(
             child: FutureBuilder<List<Productos>>(
@@ -124,7 +130,7 @@ class _OrdersContainersState extends State<OrdersContainers> {
               },
             ),
           ),
-          SizedBox(height: 12),
+          SizedBox(height: 70),
         ],
       ) 
       

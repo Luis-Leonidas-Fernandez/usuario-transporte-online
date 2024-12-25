@@ -6,7 +6,7 @@ import 'package:usuario/constants/constants.dart';
 import 'package:usuario/pages/register_page.dart';
 import 'package:usuario/providers/login_form_validar.dart';
 import 'package:usuario/responsive/responsive_ui.dart';
-import 'package:usuario/widgets/imputs.dart';
+import 'package:usuario/widgets/imputs_user_login.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});

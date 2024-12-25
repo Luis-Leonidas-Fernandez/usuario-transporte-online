@@ -25,14 +25,7 @@ class _ButtonReusableState extends State<ButtonReusable>
     super.initState();
     controller = AnimationController(
         vsync: this, duration: const Duration(milliseconds: 1800));
-/*   controller.addStatusListener((status){
-    if (status == AnimationStatus.completed) {
-      controller.reverse();
-    } else if (status == AnimationStatus.dismissed){     
-      controller.forward(from: 0.0);  
-    }
-  });
-  controller.forward(); */
+
   }
 
   @override
@@ -68,6 +61,7 @@ class _ButtonReusableState extends State<ButtonReusable>
                       isTap = false;
                       isAnimating = false;
                     });
+                    
                   });
                 });
               }              
@@ -75,7 +69,7 @@ class _ButtonReusableState extends State<ButtonReusable>
             },
             child: Container(
                 width: 372,
-                height: screenHeight < 362 ? 50 : 59,
+                height: screenHeight < 362 ? 48 : 55,
                 decoration: BoxDecoration(
                   gradient: LinearGradient(colors: [
             
@@ -111,8 +105,8 @@ class _ButtonReusableState extends State<ButtonReusable>
                     child: Row(children: [
                       Container(
                         constraints:
-                            const BoxConstraints(maxHeight: 54, maxWidth: 95),
-                        decoration: BoxDecoration(
+                            const BoxConstraints(maxHeight: 54, maxWidth: 80),                            
+                         decoration: BoxDecoration(
                             borderRadius: const BorderRadius.only(
                                 topLeft: Radius.circular(8),
                                 bottomLeft: Radius.circular(8)),
@@ -124,7 +118,7 @@ class _ButtonReusableState extends State<ButtonReusable>
                               ],
                               begin: Alignment.centerLeft,
                               end: Alignment.centerRight,
-                            )),
+                            )), 
                       ),
                       Expanded(
                         child: Center(
@@ -140,8 +134,8 @@ class _ButtonReusableState extends State<ButtonReusable>
                       ),
                       Container(
                         constraints:
-                            const BoxConstraints(maxHeight: 54, maxWidth: 95),
-                        decoration: BoxDecoration(
+                            const BoxConstraints(maxHeight: 54, maxWidth: 80),                           
+                         decoration: BoxDecoration(
                             borderRadius: const BorderRadius.only(
                                 topLeft: Radius.circular(8),
                                 bottomLeft: Radius.circular(8)),
@@ -153,7 +147,7 @@ class _ButtonReusableState extends State<ButtonReusable>
                               ],
                               begin: Alignment.centerRight,
                               end: Alignment.centerLeft,
-                            )),
+                            )), 
                       ),
                     ]))),
           );

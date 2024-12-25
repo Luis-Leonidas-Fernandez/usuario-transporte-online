@@ -1,19 +1,29 @@
 {
 
   "personalData": {   
-    "documentId": "40651547", 
+    "documentId": 40651547, 
     "profilePhoto":  ""     
   },
 
   "contactInfo": {
-    "phoneNumber": "3624859674",   
-    "address": "Avenida 9 de Julio y Calle dodero"
+    "phoneNumber": 5493624859674,   
+    "address": {
+      "calle": "Avenida 9 de Julio",
+      "altura": 3900,
+      "Provincia": "Chaco",
+      "Ciudad": "Resistencia" 
+    }
   }, 
 
   "companyInfo": {
     "companyName": "Hierros lider",
-    "cuit": "20406515478",
-    "companyAddress": "Avenida Rojas Acosta 2847"
+    "cuit": 20406515478,
+    "companyAddress": {
+      "calle": "Avenida Rojas Acosta",
+      "altura": 2847,
+      "Provincia": "Chaco",
+      "Ciudad": "Resistencia" 
+    }
   }
 }
 

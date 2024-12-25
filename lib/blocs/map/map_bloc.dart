@@ -31,6 +31,8 @@ class MapBloc extends Bloc<MapEvent, MapState> {
     on<OnStartFollowingUserEvent>(_onStartFollowingUser);    
     on<OnStopFollowingUserEvent>((event, emit) => emit( state.copyWith( isfollowingUser: false) ));
     on<OnAddAddressEvent>(_onAddAdress );
+    on<OnMapReadyEvent>((event, emit ) => emit(state.copyWith(isMapInitialized: true)));
+    on<OnCardReadyEvent>((event, emit) => emit( state.copyWith( isCardReady: true) ));
     
       
   
@@ -53,12 +55,23 @@ class MapBloc extends Bloc<MapEvent, MapState> {
 
   void _onInitMap(OnMapInitializeEvent event, Emitter<MapState> emit){
 
-    mapController = event.mapController;        
+    //mapController = event.mapController;        
     emit(state.copyWith(isMapInitialized: true));
-    
+   
     
     
   }
+
+
+  // Evento cuando el mapa está listo
+  void _onMapReady(OnMapReadyEvent event, Emitter<MapState> emit) {
+    // Aquí puedes manejar cualquier lógica adicional cuando el mapa esté listo
+     //add(OnMapReadyEvent(true));
+     emit(state.copyWith(isMapInitialized: true));
+     //Future.delayed(const Duration(seconds: 2));
+    
+  }
+
 
   void _onStartFollowingUser(OnStartFollowingUserEvent event, Emitter<MapState> emit) {    
     emit( state.copyWith( isfollowingUser: true ) );    
@@ -81,7 +94,8 @@ class MapBloc extends Bloc<MapEvent, MapState> {
 
    LatLng bounds(List<double> location) {
     
-     final LatLng myPosition = locationBloc.state.lastKnownLocation!;
+    // final LatLng myPosition = locationBloc.state.lastKnownLocation!;
+    final myPosition = LatLng(-33.222001, -63.799476);
     if(location.isEmpty) return myPosition;
     final driver = List.from(location);   
     final driverPosition = LatLng(driver[1], driver[0]);   
@@ -111,7 +125,8 @@ class MapBloc extends Bloc<MapEvent, MapState> {
     if(location.isEmpty) return 15.0;    
 
     final driver = List.from(location);
-    final LatLng userPosition = locationBloc.state.lastKnownLocation!;
+    //final LatLng userPosition = locationBloc.state.lastKnownLocation!;
+    final LatLng userPosition = LatLng(-33.222001, -63.799476);
     final driverPosition = LatLng(driver[1], driver[0]);    
 
     

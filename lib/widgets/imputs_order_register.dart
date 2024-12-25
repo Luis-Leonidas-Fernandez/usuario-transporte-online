@@ -4,7 +4,6 @@ import 'package:provider/provider.dart';
 import 'package:usuario/blocs/user/auth_bloc.dart';
 import 'package:usuario/constants/constants.dart';
 import 'package:usuario/providers/login_form_validar.dart';
-import 'package:usuario/widgets/alert_screen.dart';
 import 'package:usuario/widgets/btn_reusable.dart';
 
 class ImputFormRegistration extends StatefulWidget {

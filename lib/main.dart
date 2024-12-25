@@ -78,7 +78,7 @@ runApp(
           BlocProvider(create: (context) => AddressBloc(addressService: AddressService(), authBloc: BlocProvider.of<AuthBloc>(context)) ),        
           BlocProvider(create: (context) => MapBloc(locationBloc: BlocProvider.of<LocationBloc>(context),
          addressBloc: BlocProvider.of<AddressBloc>(context),)),
-         
+         BlocProvider(create: (context) => NavigatorBloc()),
           
         ],
       
@@ -98,7 +98,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'usuario duelo envios',
-      initialRoute: 'orders', //aqui poner login
+      initialRoute: 'home', //aqui poner login
       routes: {
         'login'   : (BuildContext context) => const LoginPage(),
         'privacy' : (BuildContext context) => const PrivacyPage(),

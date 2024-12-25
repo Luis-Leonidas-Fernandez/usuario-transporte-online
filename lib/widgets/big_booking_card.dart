@@ -5,33 +5,33 @@ import 'package:usuario/blocs/blocs.dart';
 import 'package:usuario/constants/constants.dart';
 //import 'package:usuario/models/address.dart';
 import 'package:usuario/responsive/responsive_ui.dart';
-import 'package:usuario/service/addresses_service.dart';
+//import 'package:usuario/service/addresses_service.dart';
 import 'package:usuario/service/message_service.dart';
-import 'package:usuario/service/storage_service.dart';
+//import 'package:usuario/service/storage_service.dart';
 
 import 'package:usuario/widgets/btn_reusable.dart';
 import 'package:usuario/widgets/container_detail.dart';
-import 'package:usuario/widgets/custom_message_error.dart';
-import 'package:usuario/widgets/custom_message_success.dart';
+//import 'package:usuario/widgets/custom_message_error.dart';
+//import 'package:usuario/widgets/custom_message_success.dart';
 
 import 'package:usuario/widgets/presentation_container.dart';
 import 'package:usuario/widgets/widgets.dart';
 
-class BookingCard extends StatefulWidget {
+class BigBookingCard extends StatefulWidget {
 
 
 
 
-  const BookingCard({
+  const BigBookingCard({
     super.key,
    
   });
 
   @override
-  State<BookingCard> createState() => _BookingCardState();
+  State<BigBookingCard> createState() => _BigBookingCardState();
 }
 
-class _BookingCardState extends State<BookingCard> {
+class _BigBookingCardState extends State<BigBookingCard> {
 
   final MessageService messageService = MessageService();
   
@@ -44,14 +44,15 @@ class _BookingCardState extends State<BookingCard> {
     final screenHeight = MediaQuery.of(context).size.height;
 
     ResponsiveUtil responsiveUtil = ResponsiveUtil(context);
-    double responsiveTop = responsiveUtil.getResponsiveHeight(0.50);
+    double responsiveTop = responsiveUtil.getResponsiveHeight(0.55);
 
-    late AddressService addressService = AddressService();
-    final authBloc = BlocProvider.of<AuthBloc>(context);
+    //late AddressService addressService = AddressService();
+    //final authBloc = BlocProvider.of<AuthBloc>(context);
     final addressBloc = BlocProvider.of<AddressBloc>(context);
-    final locationBloc = BlocProvider.of<LocationBloc>(context);
+    //inal locationBloc = BlocProvider.of<LocationBloc>(context);
   
     final isAccepted = addressBloc.state.isAccepted!;  
+    
    
 
     return Positioned(
@@ -94,16 +95,16 @@ class _BookingCardState extends State<BookingCard> {
             ),
           ),
           Positioned(
-            top: 60,
+            top: 48,
             left: 20,
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text(
-                  'Detalle Viaje',
+                  'Detalle Envíos',
                   style: TextStyle(
                       color: Colors.white,
-                      fontSize: 18,
+                      fontSize: 20,
                       fontWeight: FontWeight.w600),
                 ),
                 SizedBox(width: screenWidth <= 370 ? 55 : 90),
@@ -137,7 +138,7 @@ class _BookingCardState extends State<BookingCard> {
 
 
           Positioned(
-              top: 115,
+              top: 100,
               left: 20,
               right: 20,
               child: Container(
@@ -146,14 +147,14 @@ class _BookingCardState extends State<BookingCard> {
                     builder: (context, stateAddress) {
 
                       final existDriver = stateAddress.orderUser?.ok ?? false;
-                      print("exist driver: $existDriver");
+                     
 
                       if( existDriver == true) {
 
-                        print("Exist Driver Container detail: $existDriver");
+                       
                         return ContainerDetail();
                       } else if(stateAddress.isAccepted == true && existDriver == false){
-                        print("Exist Driver : Time Line Address: $existDriver");
+                       
                         return TimeLineAddress();
                       }
                       return PresentationContainer();
@@ -164,18 +165,18 @@ class _BookingCardState extends State<BookingCard> {
 
                   )),
           
-          isAccepted == false ?
+          //isAccepted == false ?
           Positioned(
-              top: screenHeight * 0.35,
-              left: 20,
-              right: 20,
+              top: screenHeight * 0.30,
+              left: 4,
+              right: 4,
               child: ButtonReusable(
-                  text: 'Pedir Ahora',
+                  text: 'Publicar envío',
                   onPressed: () async {
                     // ignore: avoid_print
                     print("button pedir tap");
 
-                    //extrae token y idUser del State
+                    /* //extrae token y idUser del State
                     final String? token = authBloc.state.usuario?.token;
                     final String? idUser = authBloc.state.usuario?.uid;
 
@@ -221,55 +222,16 @@ class _BookingCardState extends State<BookingCard> {
                       //IS ACCEPTED= TRUE
                       addressBloc.add(OnIsAcceptedTravel());
                     }
-                  }
-                )
-              )
-              : Positioned(
-              top: screenHeight * 0.35,
-              left: 20,
-              right: 20,
-              child: ButtonReusable(
-                  text: 'Finalizar',
-                  onPressed: () async {
-
-                    // ignore: avoid_print
-                                   
-
-                    //extrae token y idUser del State
-                  final String? token = authBloc.state.usuario?.token; 
-                  final String? idUser = authBloc.state.usuario?.uid;  
-
-                  // Eliminando viaje de base de datos
-                  await  addressService.finishTravel(token!, idUser!); 
-
-                  await StorageService.instance.deleteIdDriver();
-                  await StorageService.instance.deleteIdOrder();
-
-                  //desactiva mensajes de la address
-                  messageService.cancelPeriodicMessage();                     
-                  
-                  // Clear Hydrated storage
-                                    
-                  //Limpiando el State
-                  // EXIST ORDER = FALSE -- IS ACCEPTED = FALSE 
-                  addressBloc.add(const OnClearStateEvent());
-
-                  if(!context.mounted) return; 
-                 
-                  Navigator.pushReplacementNamed(context, 'notification');
-                  }
-                )
-              ),
-
+                  } */
+               }
+               )
               
-              Positioned(
-                top: 20,
-                child: ButtonBar())  ,
-
-
-        ]
-       ),
-      ),
-    );
-  }
+              
+             )
+            ]
+           )
+           )
+          );
+        }
+           
 }

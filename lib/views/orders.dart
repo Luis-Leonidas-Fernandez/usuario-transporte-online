@@ -21,7 +21,7 @@ class OrdersDetails extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => Auctions(),
+            builder: (context) => Auctions(idProducto: producto.id),
           ),
         );
       },
@@ -47,33 +47,33 @@ class OrdersDetails extends StatelessWidget {
             ),
             SizedBox(height: 35),
             Align(
-              alignment: const Alignment(-0.74, -0.7),
-              child: Text(
-                producto.tipoCarga,
-                style: GoogleFonts.roboto(
-                    fontSize: 15,
-                    color: AppConstants.textColor,
-                    decoration: TextDecoration.none,
-                    letterSpacing: 0.4),
-              ),
-            ),
-            SizedBox(height: 5),
-            Align(
-              alignment: const Alignment(-0.79, -0.7),
-              child: Text(
-                'Peso: ${producto.peso}',
-                style: GoogleFonts.roboto(
-                    fontSize: 15,
-                    color: AppConstants.textColor,
-                    decoration: TextDecoration.none,
-                    letterSpacing: 0.4),
-              ),
-            ),
-            SizedBox(height: 5),
-            Align(
               alignment: const Alignment(-0.76, -0.7),
               child: Text(
-                'Tamaño: ${producto.tamano}',
+                producto.tipoCarga?? '',
+                style: GoogleFonts.roboto(
+                    fontSize: 15,
+                    color: AppConstants.textColor,
+                    decoration: TextDecoration.none,
+                    letterSpacing: 0.4),
+              ),
+            ),
+            SizedBox(height: 5),
+            Align(
+              alignment: const Alignment(-0.73, -0.7),
+              child: Text(
+                'Peso: ${producto.peso?.peso ?? ''} ${producto.peso?.unidadPeso ?? ''}',
+                style: GoogleFonts.roboto(
+                    fontSize: 15,
+                    color: AppConstants.textColor,
+                    decoration: TextDecoration.none,
+                    letterSpacing: 0.4),
+              ),
+            ),
+            SizedBox(height: 5),
+            Align(
+              alignment: const Alignment(-0.67, -0.7),
+              child: Text(
+                'Tamaño: ${producto.tamano?.alto ?? ''} x ${producto.tamano?.ancho?? ''} x ${producto.tamano?.profundidad ?? ''}',
                 style: GoogleFonts.roboto(
                     fontSize: 15,
                     color: AppConstants.textColor,
@@ -108,11 +108,12 @@ class OrdersDetails extends StatelessWidget {
                     child: Text('Cancelar',style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold))),
                  )
                ),
-          ]),
+             ]
+          ),
         ),
       
-      
-      ]),
+      ]
+     ),
     );
   }
 }

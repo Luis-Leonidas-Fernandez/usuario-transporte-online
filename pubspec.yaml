@@ -74,12 +74,11 @@ flutter:
   assets:
    
     - assets/icon.png
-    - assets/person.jpg    
-    - assets/driver.png
-    - assets/no_internet.png
+    - assets/person.jpg     
     - assets/background_image.png
     - assets/logo.png
     - assets/truck_b.png
+    - assets/icon_truck.png
     - assets/data.json
     - .env
   
