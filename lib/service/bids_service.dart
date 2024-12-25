@@ -22,6 +22,7 @@ Future<List<Subasta>> cargarSubastas() async {
     }
   } catch (e) {
     // Manejo de errores
+    // ignore: avoid_print
     print("Error al cargar subastas: $e");
     return []; // Devuelve una lista vacía en caso de error
   }

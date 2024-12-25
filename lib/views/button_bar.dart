@@ -13,7 +13,7 @@ class ButtonBar extends StatelessWidget {
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              color: Colors.black.withOpacity(0.2), // Transparencia del fondo
+              color: Colors.black.withValues(), // Transparencia del fondo
               padding: const EdgeInsets.symmetric(vertical: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,

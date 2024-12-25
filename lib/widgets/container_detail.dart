@@ -28,7 +28,7 @@ class ContainerDetail extends StatelessWidget {
             decoration: BoxDecoration(
                 border: Border.all(
                 color: const Color.fromARGB(255, 156, 156, 156)
-                  .withOpacity(0.9),
+                  .withValues(),
                   width: 1.6              
                 ),
                 color: const Color.fromARGB(255, 2, 2, 2),
@@ -46,7 +46,7 @@ class ContainerDetail extends StatelessWidget {
                   gradient: LinearGradient(
                   colors: 
                   [                                  
-                   const Color.fromARGB(188, 126, 124, 250).withOpacity(0.5),
+                   const Color.fromARGB(188, 126, 124, 250).withValues(),
                    const  Color.fromARGB(188, 126, 124, 250),  
                   ],             
                   begin: Alignment.topCenter,
@@ -94,7 +94,7 @@ class ContainerDetail extends StatelessWidget {
             decoration: BoxDecoration(
                 border: Border.all(
                 color: const Color.fromARGB(255, 156, 156, 156)
-                  .withOpacity(0.9),
+                  .withValues(),
                   width: 1.6              
                 ),
                 color: const Color.fromARGB(255, 2, 2, 2),
@@ -113,7 +113,7 @@ class ContainerDetail extends StatelessWidget {
                   gradient: LinearGradient(
                   colors: 
                   [                                  
-                   const Color.fromARGB(188, 126, 124, 250).withOpacity(0.5),
+                   const Color.fromARGB(188, 126, 124, 250).withValues(),
                    const  Color.fromARGB(188, 126, 124, 250),  
                   ],             
                   begin: Alignment.topCenter,
@@ -159,7 +159,7 @@ class ContainerDetail extends StatelessWidget {
             decoration: BoxDecoration(
                 border: Border.all(
                 color: const Color.fromARGB(255, 156, 156, 156)
-                  .withOpacity(0.9),
+                  .withValues(),
                   width: 1.6              
                 ),
                 color: const Color.fromARGB(255, 2, 2, 2),
@@ -178,7 +178,7 @@ class ContainerDetail extends StatelessWidget {
                   gradient: LinearGradient(
                   colors: 
                   [                                  
-                   const Color.fromARGB(188, 126, 124, 250).withOpacity(0.5),
+                   const Color.fromARGB(188, 126, 124, 250).withValues(),
                    const  Color.fromARGB(188, 126, 124, 250),  
                   ],             
                   begin: Alignment.topCenter,

@@ -92,6 +92,7 @@ class AddressBloc extends HydratedBloc<AddressEvent, AddressState> {
         yield resp;
       }
     } catch (e) {
+      // ignore: avoid_print
       print('Error: $e');
     }
   }

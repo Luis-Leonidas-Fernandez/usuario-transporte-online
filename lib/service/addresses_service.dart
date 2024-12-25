@@ -119,11 +119,13 @@ class AddressService {
   
 } 
   } on FormatException catch (e) {  
+    // ignore: avoid_print
     print("error : $e");   
         
       return throw Exception(e);
   } catch (e) {
     // Handle all other errors
+    // ignore: avoid_print
     print('Error: $e');
     throw Exception('Error: $e');
   }

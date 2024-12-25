@@ -84,6 +84,7 @@ class _OrdersContainersState extends State<OrdersContainers> {
       return productos;
     } catch (e) {
       // Manejo de errores
+      // ignore: avoid_print
       print("Error al cargar productos: $e");
       return [];
     }

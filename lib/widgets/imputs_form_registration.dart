@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+//import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
-import 'package:usuario/blocs/user/auth_bloc.dart';
+//import 'package:usuario/blocs/user/auth_bloc.dart';
 import 'package:usuario/constants/constants.dart';
 import 'package:usuario/providers/login_form_validar.dart';
-import 'package:usuario/widgets/alert_screen.dart';
+//import 'package:usuario/widgets/alert_screen.dart';
 import 'package:usuario/widgets/btn_reusable.dart';
 
 class ImputFormRegistration extends StatefulWidget {
@@ -22,7 +22,7 @@ class _ImputFormRegistrationState extends State<ImputFormRegistration> {
   @override
   Widget build(BuildContext context) {
     final loginFormValidar = Provider.of<LoginFormValidar>(context);
-    final authUser = BlocProvider.of<AuthBloc>(context);
+    //final authUser = BlocProvider.of<AuthBloc>(context);
 
     final screenHeight = MediaQuery.of(context).size.height;
     
@@ -37,7 +37,7 @@ class _ImputFormRegistrationState extends State<ImputFormRegistration> {
           decoration: BoxDecoration(
               border: Border.all(
                   color:
-                      const Color.fromARGB(255, 251, 250, 252).withOpacity(0.9),
+                      const Color.fromARGB(255, 251, 250, 252).withValues(),
                   width: 1.4),
               color: const Color.fromARGB(255, 2, 2, 2),
               borderRadius: BorderRadius.circular(10)),
@@ -52,7 +52,7 @@ class _ImputFormRegistrationState extends State<ImputFormRegistration> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),
                     gradient: LinearGradient(colors: [
-                      const Color.fromARGB(188, 126, 124, 250).withOpacity(0.5),
+                      const Color.fromARGB(188, 126, 124, 250).withValues(),
                       const Color.fromARGB(188, 126, 124, 250),
                     ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
                   ),
@@ -109,7 +109,7 @@ class _ImputFormRegistrationState extends State<ImputFormRegistration> {
           decoration: BoxDecoration(
               border: Border.all(
                   color:
-                      const Color.fromARGB(255, 250, 248, 248).withOpacity(0.9),
+                      const Color.fromARGB(255, 250, 248, 248).withValues(),
                   width: 1.4),
               color: const Color.fromARGB(255, 2, 2, 2),
               borderRadius: BorderRadius.circular(10)),
@@ -124,7 +124,7 @@ class _ImputFormRegistrationState extends State<ImputFormRegistration> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),
                     gradient: LinearGradient(colors: [
-                      const Color.fromARGB(188, 126, 124, 250).withOpacity(0.5),
+                      const Color.fromARGB(188, 126, 124, 250).withValues(),
                       const Color.fromARGB(188, 126, 124, 250),
                     ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
                   ),
@@ -185,7 +185,7 @@ class _ImputFormRegistrationState extends State<ImputFormRegistration> {
           decoration: BoxDecoration(
               border: Border.all(
                   color:
-                      const Color.fromARGB(255, 251, 250, 252).withOpacity(0.9),
+                      const Color.fromARGB(255, 251, 250, 252).withValues(),
                   width: 1.4),
               color: const Color.fromARGB(255, 2, 2, 2),
               borderRadius: BorderRadius.circular(10)),
@@ -200,7 +200,7 @@ class _ImputFormRegistrationState extends State<ImputFormRegistration> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),
                     gradient: LinearGradient(colors: [
-                      const Color.fromARGB(188, 126, 124, 250).withOpacity(0.5),
+                      const Color.fromARGB(188, 126, 124, 250).withValues(),
                       const Color.fromARGB(188, 126, 124, 250),
                     ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
                   ),
@@ -257,7 +257,7 @@ class _ImputFormRegistrationState extends State<ImputFormRegistration> {
           decoration: BoxDecoration(
               border: Border.all(
                   color:
-                      const Color.fromARGB(255, 251, 250, 252).withOpacity(0.9),
+                      const Color.fromARGB(255, 251, 250, 252).withValues(),
                   width: 1.4),
               color: const Color.fromARGB(255, 2, 2, 2),
               borderRadius: BorderRadius.circular(10)),
@@ -272,7 +272,7 @@ class _ImputFormRegistrationState extends State<ImputFormRegistration> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),
                     gradient: LinearGradient(colors: [
-                      const Color.fromARGB(188, 126, 124, 250).withOpacity(0.5),
+                      const Color.fromARGB(188, 126, 124, 250).withValues(),
                       const Color.fromARGB(188, 126, 124, 250),
                     ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
                   ),
@@ -329,7 +329,7 @@ class _ImputFormRegistrationState extends State<ImputFormRegistration> {
           decoration: BoxDecoration(
               border: Border.all(
                   color:
-                      const Color.fromARGB(255, 251, 250, 252).withOpacity(0.9),
+                      const Color.fromARGB(255, 251, 250, 252).withValues(),
                   width: 1.4),
               color: const Color.fromARGB(255, 2, 2, 2),
               borderRadius: BorderRadius.circular(10)),
@@ -344,7 +344,7 @@ class _ImputFormRegistrationState extends State<ImputFormRegistration> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),
                     gradient: LinearGradient(colors: [
-                      const Color.fromARGB(188, 126, 124, 250).withOpacity(0.5),
+                      const Color.fromARGB(188, 126, 124, 250).withValues(),
                       const Color.fromARGB(188, 126, 124, 250),
                     ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
                   ),
@@ -418,7 +418,7 @@ class _ImputFormRegistrationState extends State<ImputFormRegistration> {
                       gradient: LinearGradient(
                         colors: [
                           const Color.fromARGB(188, 126, 124, 250).withAlpha(2),
-                          AppConstants.blur.withOpacity(0.5),
+                          AppConstants.blur.withValues(),
                         ],
                         begin: Alignment.centerLeft,
                         end: Alignment.centerRight,

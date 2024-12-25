@@ -37,7 +37,7 @@ class _ImputsRegisterState extends State<ImputsRegister> {
           decoration: BoxDecoration(
               border: Border.all(
                   color:
-                      const Color.fromARGB(255, 251, 250, 252).withOpacity(0.9),
+                      const Color.fromARGB(255, 251, 250, 252).withValues(),
                   width: 1.4),
               color: const Color.fromARGB(255, 2, 2, 2),
               borderRadius: BorderRadius.circular(10)),
@@ -52,7 +52,7 @@ class _ImputsRegisterState extends State<ImputsRegister> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),
                     gradient: LinearGradient(colors: [
-                      const Color.fromARGB(188, 126, 124, 250).withOpacity(0.5),
+                      const Color.fromARGB(188, 126, 124, 250).withValues(),
                       const Color.fromARGB(188, 126, 124, 250),
                     ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
                   ),
@@ -108,7 +108,7 @@ class _ImputsRegisterState extends State<ImputsRegister> {
           decoration: BoxDecoration(
               border: Border.all(
                   color:
-                      const Color.fromARGB(255, 251, 250, 252).withOpacity(0.9),
+                      const Color.fromARGB(255, 251, 250, 252).withValues(),
                   width: 1.4),
               color: const Color.fromARGB(255, 2, 2, 2),
               borderRadius: BorderRadius.circular(10)),
@@ -123,7 +123,7 @@ class _ImputsRegisterState extends State<ImputsRegister> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),
                     gradient: LinearGradient(colors: [
-                      const Color.fromARGB(188, 126, 124, 250).withOpacity(0.5),
+                      const Color.fromARGB(188, 126, 124, 250).withValues(),
                       const Color.fromARGB(188, 126, 124, 250),
                     ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
                   ),
@@ -189,7 +189,7 @@ class _ImputsRegisterState extends State<ImputsRegister> {
           decoration: BoxDecoration(
               border: Border.all(
                   color:
-                      const Color.fromARGB(255, 250, 248, 248).withOpacity(0.9),
+                      const Color.fromARGB(255, 250, 248, 248).withValues(),
                   width: 1.4),
               color: const Color.fromARGB(255, 2, 2, 2),
               borderRadius: BorderRadius.circular(10)),
@@ -204,7 +204,7 @@ class _ImputsRegisterState extends State<ImputsRegister> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),
                     gradient: LinearGradient(colors: [
-                      const Color.fromARGB(188, 126, 124, 250).withOpacity(0.5),
+                      const Color.fromARGB(188, 126, 124, 250).withValues(),
                       const Color.fromARGB(188, 126, 124, 250),
                     ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
                   ),
@@ -301,7 +301,7 @@ class _ImputsRegisterState extends State<ImputsRegister> {
                       gradient: LinearGradient(
                         colors: [
                           const Color.fromARGB(188, 126, 124, 250).withAlpha(2),
-                          AppConstants.blur.withOpacity(0.5),
+                          AppConstants.blur.withValues(),
                         ],
                         begin: Alignment.centerLeft,
                         end: Alignment.centerRight,

@@ -29,7 +29,7 @@ import 'package:intl/number_symbols_data.dart';
 
 import 'package:intl/number_symbols.dart';
 import 'package:usuario/config/namber_symbol.dart';
-import 'package:android_alarm_manager_plus/android_alarm_manager_plus.dart';
+//import 'package:android_alarm_manager_plus/android_alarm_manager_plus.dart';
 import 'package:usuario/splash/splash_screen.dart';
 
 
@@ -39,7 +39,7 @@ Future<void> main() async{
      //proyecto final usuarios duelo envios
      WidgetsFlutterBinding.ensureInitialized();
      
-      await AndroidAlarmManager.initialize();     
+      //await AndroidAlarmManager.initialize();     
      
 
      HydratedBloc.storage = await HydratedStorage.build(
@@ -98,7 +98,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'usuario duelo envios',
-      initialRoute: 'orders', //aqui poner login
+      initialRoute: 'home', //aqui poner login
       routes: {
         'login'   : (BuildContext context) => const LoginPage(),
         'privacy' : (BuildContext context) => const PrivacyPage(),

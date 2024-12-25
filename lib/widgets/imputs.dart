@@ -40,7 +40,7 @@ class _ImputsState extends State<Imputs> {
             decoration: BoxDecoration(
                 border: Border.all(
                     color: const Color.fromARGB(255, 251, 250, 252)
-                        .withOpacity(0.9),
+                        .withValues(),
                     width: 1.4),
                 color: const Color.fromARGB(255, 2, 2, 2),
                 borderRadius: BorderRadius.circular(10)),
@@ -58,7 +58,7 @@ class _ImputsState extends State<Imputs> {
                       gradient: LinearGradient(
                           colors: [
                             const Color.fromARGB(188, 126, 124, 250)
-                                .withOpacity(0.5),
+                                .withValues(),
                             const Color.fromARGB(188, 126, 124, 250),
                           ],
                           begin: Alignment.topCenter,
@@ -126,7 +126,7 @@ class _ImputsState extends State<Imputs> {
             decoration: BoxDecoration(
                 border: Border.all(
                     color: const Color.fromARGB(255, 250, 248, 248)
-                        .withOpacity(0.9),
+                        .withValues(),
                     width: 1.4),
                 color: const Color.fromARGB(255, 2, 2, 2),
                 borderRadius: BorderRadius.circular(10)),
@@ -144,7 +144,7 @@ class _ImputsState extends State<Imputs> {
                       gradient: LinearGradient(
                           colors: [
                             const Color.fromARGB(188, 126, 124, 250)
-                                .withOpacity(0.5),
+                                .withValues(),
                             const Color.fromARGB(188, 126, 124, 250),
                           ],
                           begin: Alignment.topCenter,
@@ -233,7 +233,7 @@ class _ImputsState extends State<Imputs> {
                 gradient: LinearGradient(
                   colors: [
                     const Color.fromARGB(188, 126, 124, 250).withAlpha(2),
-                    AppConstants.blur.withOpacity(0.5),
+                    AppConstants.blur.withValues(),
                   ],
                   begin: Alignment.centerLeft,
                   end: Alignment.centerRight,
